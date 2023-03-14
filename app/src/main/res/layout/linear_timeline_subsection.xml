@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topicChat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/timelineLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/SubSectionjudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/judul_timeline_coklat"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:padding="8dp"
+            android:text="Loading subsection..."
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pointsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/SubSectionjudul" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/task_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:paddingStart="10dp"
+            app:layout_constraintTop_toBottomOf="@id/pointsRecycler"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/bulletPointform"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:padding="3dp"
+                android:src="@drawable/bgplus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/taskSubSectionform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:hint="task name"
+                android:textSize="16sp"
+                android:text=""
+                app:layout_constraintStart_toEndOf="@id/bulletPointform"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/taskDecsform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:layout_marginStart="20dp"
+                android:hint="task descripsion"
+                android:textSize="16sp"
+                android:text=""
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/taskSubSectionform" />
+
+            <ImageButton
+                android:id="@+id/okAddTask"
+                android:layout_width="50dp"
+                android:layout_height="46dp"
+                android:background="@color/primary_50"
+                android:src="@drawable/ic_baseline_check_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/taskDecsform" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:paddingStart="10dp"
+            app:layout_constraintTop_toBottomOf="@id/task_form">
+
+            <ImageView
+                android:id="@+id/bulletPoint3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:padding="3dp"
+                android:src="@drawable/bgplus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/taskSubSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:hint="@string/add_task"
+                android:textColorHint="@color/primary_90"
+                android:textSize="12sp"
+                android:text=""
+                app:layout_constraintStart_toEndOf="@id/bulletPoint3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

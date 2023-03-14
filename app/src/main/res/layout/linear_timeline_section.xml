@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topicChat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:layout_marginVertical="10dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/timelineLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_login"
+        android:padding="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header_timeline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/judulSection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:text="Design"
+                    android:textColor="@color/neutral_90"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/statusTL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/endDate"
+                    android:layout_toEndOf="@id/judulSection"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:gravity="center"
+                    android:text="On Going"
+                    android:textColor="@color/green_70"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/endDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:text="Ends 21 Jan 2023"
+                    android:textColor="@color/warning_70"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/includeSSjudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/judul_timeline_coklat"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:padding="8dp"
+            android:text="Loading subsection..."
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_timeline" />
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/includeTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/includeSSjudul"
+            tools:layout_editor_absoluteX="16dp">
+
+            <ImageView
+                android:id="@+id/bulletPoint3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:padding="3dp"
+                android:src="@drawable/bgplus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/includeSSTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="loading Content..."
+                android:textColor="@color/neutral_90"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/bulletPoint3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/includeSSDecs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="loading Content..."
+                android:textColor="@color/neutral_90"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/includeSSTask" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+<!--        <include-->
+<!--            android:id="@+id/timeline_content"-->
+<!--            layout="@layout/linear_timeline_subsection"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/header_timeline"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="match_parent">-->
+<!--        </include>-->

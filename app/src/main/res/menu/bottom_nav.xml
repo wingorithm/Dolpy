@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Chat"
+        android:id="@+id/chat"
+        android:icon="@drawable/messages_bnav"
+        android:enabled="true" />
+
+    <item android:title="Timeline"
+        android:id="@+id/timeline"
+        android:icon="@drawable/chart_bnav"
+        android:enabled="true"/>
+
+    <item android:title="Files"
+        android:id="@+id/files"
+        android:icon="@drawable/folder_bnav"
+        android:enabled="true"/>
+
+    <item android:title="People"
+        android:id="@+id/people"
+        android:icon="@drawable/profile_bnav"
+        android:enabled="true"/>
+</menu>

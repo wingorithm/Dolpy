@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Project"
+            android:icon="@drawable/home_2"
+            android:title="Groups" />
+        <item
+            android:id="@+id/nav_Calendar"
+            android:icon="@drawable/ic_baseline_calendar_month_24"
+            android:title="Calendar" />
+
+        <item android:title="Task SECTION">
+            <menu>
+                 <item
+                    android:id="@+id/nav_TodoList"
+                    android:icon="@drawable/task_hamburger"
+                    android:title="To-do List" />
+            </menu>
+
+        </item>
+
+        <item android:title="Utility SECTION">
+            <menu>
+                <item
+                    android:id="@+id/nav_Profile"
+                    android:icon="@drawable/person_hamburger"
+                    android:title="Profile" />
+                <item
+                    android:id="@+id/nav_Help"
+                    android:icon="@drawable/help_hamburger"
+                    android:title="Help" />
+            </menu>
+
+        </item>
+
+    </group>
+</menu>
